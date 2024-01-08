@@ -22,8 +22,8 @@ class InferlessPythonModel:
         prompt = inputs["prompt"]
         image_url = inputs["image_url"]
         mask_url = inputs["mask_url"]
-        init_image = InferlessPythonModel.download_image(image_url).resize((512, 512))
-        mask_image = InferlessPythonModel.download_image(mask_url).resize((512, 512))
+        init_image = InferlessPythonModel.download_image(image_url).resize((1024, 1024))
+        mask_image = InferlessPythonModel.download_image(mask_url).resize((1024, 1024))
         inpaint_image = self.pipe(
             prompt=prompt, image=init_image, mask_image=mask_image
         ).images[0]
