@@ -1,0 +1,11 @@
+build:
+    system_packages:
+        - "libssl-dev"
+        - "ffmpeg"
+    python_packages:
+        - "transformers==4.29.0"
+        - "torch>=2.1.1"
+        - "supabase>=2.2.0"
+        - "pillow>=9.4.0"
+        - "accelerate>=0.25.0"
+        - "triton>=2.0.0"
